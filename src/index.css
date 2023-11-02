@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Alkaline";
+  src: url("../public/alkaline.otf") format("otf");
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  background-color: black;
+}
+
+#brand_name {
+  font-family: "Alkaline";
+}
