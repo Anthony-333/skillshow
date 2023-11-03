@@ -20,10 +20,20 @@ const navlinks = [
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState<boolean>(false);
+  const [scrollY, setScrollY] = React.useState<number>(0);
+
+  window.addEventListener("scroll", () => {
+    setScrollY(window.scrollY);
+  });
+
   return (
-    <div>
+    <div
+      className={`relative ${
+        scrollY >= 100 && "bg-gray-950 opacity-95"
+      } transition duration-500 ease-in-out`}
+    >
       <div
-        className={`flex items-center justify-between py-10  ${
+        className={`flex items-center justify-between py-5  ${
           isMenuOpen && "border-b border-gray-800"
         }`}
       >
@@ -75,9 +85,10 @@ const Navbar = () => {
       </div>
 
       <div
-        className={`hidden px-5 transition duration-500 ease-in-out opacity-0 ${
+        className={`${isMenuOpen ? "flex-1" : "hidden"} ${
           isMenuOpen && "opacity-100"
-        }`}
+        } px-5 transition duration-500 ease-in-out opacity-0 
+        absolute z-30 bg-black w-full h-screen `}
       >
         <div className="border-b border-gray-800">
           {navlinks.map((item, i) => (
