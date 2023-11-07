@@ -5,11 +5,11 @@ import Filters from "../../components/Filters/Filters";
 const Homepage = () => {
   return (
     <div>
-      <div className="sticky top-0 z-30 px-5 lg:px-10">
+      <div className="sticky top-0 z-30  lg:px-10">
         <Navbar />
       </div>
 
-      <div className="my-5">
+      <div className="">
         <Hero />
 
         <Filters />

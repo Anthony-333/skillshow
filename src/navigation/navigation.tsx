@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Homepage from "../pages/Homepage/Homepage";
+import Signup from "../pages/Signup/Signup";
 
 const Navigation = () => {
   return (
@@ -8,7 +9,7 @@ const Navigation = () => {
       <Routes>
         {/* <Route element={<Public />}> */}
         <Route path="/" element={<Homepage />} />
-
+        <Route path="/signup" element={<Signup />} />
         {/* </Route> */}
 
         {/* <Route element={<Private />}>
